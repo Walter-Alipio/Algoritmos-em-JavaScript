@@ -1,16 +1,12 @@
 const books = require("./booksList.js");
 
-let cheaper = 0;
 let expensiver = 0;
 
-/*O looping percorre a lista salvando o indice do livro mais barato*/
-for (let current = 0; current < books.length; current++) {
-    if (books[current].price < books[cheaper].price) cheaper = current;
-}
 /*O looping percorre a lista salvando o indice do livro mais caro*/
 for (let current = 0; current < books.length; current++) {
     if (books[current].price > books[expensiver].price) expensiver = current;
 }
+
 console.log(
     `O livro mais barato custa ${books[cheaper].price} e o titulo é ${books[cheaper].title}`
 );
