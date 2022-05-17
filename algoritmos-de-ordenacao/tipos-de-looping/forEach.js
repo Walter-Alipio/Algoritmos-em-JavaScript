@@ -5,13 +5,13 @@ const lowerValue = require("../lowerValue");
 
 //Utilizando forEach
 books.forEach((_, indice) => {
-    let lower = lowerValue(books, indice);
+  let lower = lowerValue(books, indice);
 
-    let currentBook = books[indice];
-    let lowerPriceBook = books[lower];
+  let currentBook = books[indice];
+  let lowerPriceBook = books[lower];
 
-    books[indice] = lowerPriceBook;
-    books[lower] = currentBook;
+  books[indice] = lowerPriceBook;
+  books[lower] = currentBook;
 });
 
 console.log(books);
