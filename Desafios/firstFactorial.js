@@ -14,4 +14,4 @@ function firstFactorial(num) {
   return factorial;
 }
 
-console.log(firstFactorial(5));
+console.log(firstFactorial(4));
