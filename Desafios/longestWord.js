@@ -6,10 +6,7 @@ const test1 = "Hello world123 567";
 const test2 = "fun&!! time_$#@ ";
 
 const LongestWord = (sen) => {
-  const arr = sen
-    .split(" ")
-    .toString()
-    .match(/[a-zA-Z0-9]+/g); //Retorna um array com elementos que satisfazem a regex.
+  const arr = sen.match(/[a-zA-Z0-9]+/g); //Retorna um array com elementos que satisfazem a regex.
 
   /* abro o array a onde existem os acentos e filtro um novo array usando regex para tirar espaços vazios*/
   //const arr = [...array.split(/[.,!;:?]/g)].filter((item) => /\S/.test(item));
