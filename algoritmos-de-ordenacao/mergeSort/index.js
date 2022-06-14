@@ -17,7 +17,7 @@ function ordered(part1, part2) {
   let actualPositionPart1 = 0;
   let actualPositionPart2 = 0;
   const result = [];
-
+  //atribui ao result os elementos de forma ordenada
   while (
     actualPositionPart1 < part1.length &&
     actualPositionPart2 < part2.length
@@ -33,7 +33,7 @@ function ordered(part1, part2) {
       actualPositionPart2++;
     }
   }
-
+  //Concatena no final do array result a sobra do array anterior
   return result.concat(
     actualPositionPart1 < part1.length
       ? part1.slice(actualPositionPart1)
