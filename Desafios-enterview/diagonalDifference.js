@@ -9,23 +9,16 @@ const arr = [
 function diagonalDifference(arr) {
   let firstDiagonal = 0;
   let secondDiagonal = 0;
-  let count = 0;
-
+  let arrLength = arr.length - 1;
   for (let i = 0; i < arr.length; i++) {
     firstDiagonal += arr[i][i];
-    count++;
+    secondDiagonal += arr[i][arrLength];
+    arrLength--;
   }
-  count = count - 1;
 
-  for (let i = 0; i < arr.length; i++) {
-    secondDiagonal += arr[i][count];
-
-    count--;
-  }
-  if (firstDiagonal > secondDiagonal) {
-    return firstDiagonal - secondDiagonal;
-  }
-  return secondDiagonal - firstDiagonal;
+  return firstDiagonal > secondDiagonal
+    ? firstDiagonal - secondDiagonal
+    : secondDiagonal - firstDiagonal;
 }
 
 console.log(diagonalDifference(arr));
